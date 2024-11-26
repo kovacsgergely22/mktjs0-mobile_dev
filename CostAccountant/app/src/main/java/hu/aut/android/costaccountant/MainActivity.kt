@@ -37,7 +37,7 @@ class MainActivity : AppCompatActivity(), CostItemDialog.CostItemHandler {
         setSupportActionBar(toolbar)
         //Új elem hozzáadásakor hívódik meg, a rózsaszín levél ikonos gomb eseménykezelője
         //A ShoppingTimeDialog-ot hívja meg (jeleníti meg)
-        fab.setOnClickListener { view ->
+        ikon.setOnClickListener { view ->
             CostItemDialog().show(supportFragmentManager, "TAG_ITEM")
         }
 
@@ -45,7 +45,7 @@ class MainActivity : AppCompatActivity(), CostItemDialog.CostItemHandler {
             /*Új elem felvitelének vizsgálata, akkor hívódik meg, a dialógus címét állítja*/
         if (isFirstRun()) {
             MaterialTapTargetPrompt.Builder(this@MainActivity)
-                    .setTarget(findViewById<View>(R.id.fab))
+                    .setTarget(findViewById<View>(R.id.ikon))
                     .setPrimaryText("New Shopping Item")
                     .setSecondaryText("Tap here to create new shopping item")
                     .show()
