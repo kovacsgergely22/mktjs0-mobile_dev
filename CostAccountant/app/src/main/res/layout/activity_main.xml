@@ -45,7 +45,7 @@
         android:id="@+id/recyclerShopping"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="#F9FBE7"
+        android:background="#03A9F4"
         android:padding="20dp"
         android:scrollbars="vertical"
         app:layoutManager="android.support.v7.widget.LinearLayoutManager"
