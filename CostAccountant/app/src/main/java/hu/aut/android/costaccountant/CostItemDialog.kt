@@ -8,7 +8,7 @@ import android.support.v7.app.AlertDialog
 import android.widget.EditText
 import hu.aut.android.costaccountant.data.CostItem
 import kotlinx.android.synthetic.main.dialog_create_item.view.*
-import java.util.*
+
 /*
 Ez a dialógus ablak szolgál az új Shipping Item felvitelére, és a meglevő Shopping Item módosítására
  */
@@ -61,7 +61,7 @@ class CostItemDialog : DialogFragment() {
         //Itt is szükséges a bővítés új Shopping Item adattag esetén
         etItem = rootView.etName
         etPrice = rootView.etPrice
-        etQuantity=rootView.etQuantity
+        etQuantity=rootView.etCategory
         etShop=rootView.etShop
         builder.setView(rootView)
         //Megnézzük, hogy kapott-e argumentumot (a fő ablakból), ha igen, akkor az adattagokat beállítjuk erre
@@ -76,7 +76,7 @@ class CostItemDialog : DialogFragment() {
             etPrice.setText(item.price.toString())
             etQuantity.setText(item.quantity.toString())
             etShop.setText(item.shop)
-            builder.setTitle("Edit shopping list")
+            builder.setTitle("Edit Cost list")
         }
     }
 

@@ -46,8 +46,8 @@ class MainActivity : AppCompatActivity(), CostItemDialog.CostItemHandler {
         if (isFirstRun()) {
             MaterialTapTargetPrompt.Builder(this@MainActivity)
                     .setTarget(findViewById<View>(R.id.ikon))
-                    .setPrimaryText("New Shopping Item")
-                    .setSecondaryText("Tap here to create new shopping item")
+                    .setPrimaryText("New Cost Item")
+                    .setSecondaryText("Tap here to create new cost item")
                     .show()
         }
 

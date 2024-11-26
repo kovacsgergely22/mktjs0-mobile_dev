@@ -18,14 +18,14 @@
     <android.support.constraint.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="218dp"
-        android:background="#FBE9E7">
+        android:background="#EAF4DF">
 
         <Button
             android:id="@+id/btnEdit"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:background="#C5CAE9"
-            android:text="Edit"
+            android:text="@string/edit"
             android:textColor="#1A237E"
             android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="parent"
@@ -36,7 +36,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:background="#C5CAE9"
-            android:text="Delete"
+            android:text="@string/delete"
             android:textColor="#1A237E"
             android:textStyle="bold"
             app:layout_constraintBottom_toBottomOf="parent"
@@ -44,24 +44,30 @@
 
         <CheckBox
             android:id="@+id/cbBought"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="100dp"
+            android:layout_height="48dp"
+            android:layout_marginStart="28dp"
+            android:layout_marginLeft="28dp"
             android:layout_marginTop="92dp"
-            android:text="Bought"
-            android:textColor="#880E4F"
+            android:minHeight="48dp"
+            android:text="@string/bought"
+            android:textColor="#388E3C"
             android:textStyle="bold"
-            app:layout_constraintTop_toTopOf="@+id/tvPrice"
-            tools:layout_editor_absoluteX="16dp" />
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/tvPrice" />
 
         <TextView
             android:id="@+id/tvName"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginLeft="16dp"
             android:layout_marginTop="41dp"
-            android:textColor="#880E4F"
+            android:textColor="#388E3C"
+            android:textSize="16sp"
             android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="@+id/textView"
-            tools:layout_editor_absoluteX="16dp"
             tools:text="Popcorn" />
 
         <TextView
@@ -70,12 +76,13 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
             android:layout_marginRight="8dp"
-            android:textColor="#880E4F"
+            android:textColor="#2E7D32"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintLeft_toLeftOf="@+id/tvName"
             app:layout_constraintRight_toRightOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/tvName"
-            tools:text="2523" />
+            tools:text="2523"
+            android:layout_marginEnd="8dp" />
 
         <TextView
             android:id="@+id/tvQuantity"
@@ -83,12 +90,13 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="40dp"
             android:layout_marginRight="8dp"
-            android:textColor="#880E4F"
+            android:textColor="#2E7D32"
             card_view:layout_constraintHorizontal_bias="0.0"
             card_view:layout_constraintLeft_toLeftOf="@+id/tvName"
             card_view:layout_constraintRight_toRightOf="parent"
             card_view:layout_constraintTop_toBottomOf="@+id/tvName"
-            tools:text="2523" />
+            tools:text="2523"
+            android:layout_marginEnd="8dp" />
 
         <TextView
             android:id="@+id/tvShop"
@@ -96,23 +104,28 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="72dp"
             android:layout_marginRight="8dp"
-            android:textColor="#880E4F"
+            android:textColor="#2E7D32"
             card_view:layout_constraintHorizontal_bias="0.0"
             card_view:layout_constraintLeft_toLeftOf="@+id/tvName"
             card_view:layout_constraintRight_toRightOf="parent"
             card_view:layout_constraintTop_toBottomOf="@+id/tvName"
-            tools:text="2523" />
+            tools:text="2523"
+            android:layout_marginEnd="8dp" />
 
         <TextView
             android:id="@+id/textView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Shopping list"
-            android:textColor="#D81B60"
+            android:layout_marginStart="80dp"
+            android:layout_marginLeft="80dp"
+            android:layout_marginTop="7dp"
+            android:text="@string/costs"
+            android:textColor="#3F51B5"
             android:textSize="24sp"
             android:textStyle="bold"
-            tools:layout_editor_absoluteX="108dp"
-            tools:layout_editor_absoluteY="7dp" />
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="Costs" />
 
     </android.support.constraint.ConstraintLayout>
 

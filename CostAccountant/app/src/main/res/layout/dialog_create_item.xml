@@ -27,7 +27,7 @@
         android:textStyle="bold|italic" />
 
     <EditText
-        android:id="@+id/etQuantity"
+        android:id="@+id/etCategory"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="Kategória"
