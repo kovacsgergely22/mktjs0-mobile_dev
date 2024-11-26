@@ -61,7 +61,7 @@ class CostAccountAdapter : RecyclerView.Adapter<ViewHolder>, ShoppingTouchHelper
             items[position].bought = holder.cbBought.isChecked
             val dbThread = Thread {
                 //Itt frissíti a DB-ben
-                AppDatabase.getInstance(context).shoppingItemDao().updateItem(items[position])
+                AppDatabase.getInstance(context).costItemDao().updateItem(items[position])
             }
             dbThread.start()
         }
@@ -74,7 +74,7 @@ class CostAccountAdapter : RecyclerView.Adapter<ViewHolder>, ShoppingTouchHelper
     /*Elem törlésekor hívódik meg. Az adatbázisból törli az elemet (DAO-n keresztül)*/
     fun deleteItem(position: Int) {
         val dbThread = Thread {
-            AppDatabase.getInstance(context).shoppingItemDao().deleteItem(
+            AppDatabase.getInstance(context).costItemDao().deleteItem(
                     items[position])
             (context as MainActivity).runOnUiThread{
                 items.removeAt(position)

@@ -115,7 +115,7 @@ class CostItemDialog : DialogFragment() {
                 etItem.text.toString(),
                 etPrice.text.toString().toInt(),
                 false,
-                etQuantity.text.toString().toInt(),
+                etQuantity.text.toString(),
                 etShop.text.toString()
         ))
     }
@@ -126,7 +126,7 @@ class CostItemDialog : DialogFragment() {
                 MainActivity.KEY_ITEM_TO_EDIT) as CostItem
         itemToEdit.name = etItem.text.toString()
         itemToEdit.price = etPrice.text.toString().toInt()
-        itemToEdit.quantity=etQuantity.text.toString().toInt()
+        itemToEdit.quantity=etQuantity.text.toString()
         itemToEdit.shop=etShop.text.toString()
 
         costItemHandler.shoppingItemUpdated(itemToEdit)

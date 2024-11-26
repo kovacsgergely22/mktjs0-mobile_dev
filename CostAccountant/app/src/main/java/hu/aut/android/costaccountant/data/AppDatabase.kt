@@ -5,12 +5,12 @@ import android.arch.persistence.room.Room
 import android.arch.persistence.room.RoomDatabase
 import android.content.Context
 /*
-Elkészíti az adatbázist azaz a shopping.db-t. a ShoppingItem alapján lesz a tábla
+Elkészíti az adatbázist azaz a shopping.db-t. A shopping.db-t costs.db-re módosítottam. a ShoppingItem helyett a CostItem alapján lesz a tábla
  */
 @Database(entities = arrayOf(CostItem::class), version = 2)
 abstract class AppDatabase : RoomDatabase() {
 
-    abstract fun shoppingItemDao(): CostItemDAO
+    abstract fun costItemDao(): CostItemDAO
 
     companion object {
         private var INSTANCE: AppDatabase? = null
@@ -18,7 +18,7 @@ abstract class AppDatabase : RoomDatabase() {
         fun getInstance(context: Context): AppDatabase {
             if (INSTANCE == null) {
                 INSTANCE = Room.databaseBuilder(context.applicationContext,
-                        AppDatabase::class.java, "shopping.db")
+                        AppDatabase::class.java, "costs.db")
                         .build()
             }
             return INSTANCE!!

@@ -12,34 +12,35 @@
         android:id="@+id/etName"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Item name"
-        android:textColor="#D81B60"
-        android:textStyle="bold" />
+        android:hint="Termék neve"
+        android:inputType="text"
+        android:textColor="#3F51B5"
+        android:textStyle="bold|italic" />
 
     <EditText
         android:id="@+id/etPrice"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Price"
+        android:hint="Ár"
         android:inputType="numberDecimal"
-        android:textColor="#D81B60"
-        android:textStyle="bold" />
+        android:textColor="#3F51B5"
+        android:textStyle="bold|italic" />
 
     <EditText
         android:id="@+id/etQuantity"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Quantiy"
-        android:inputType="numberDecimal"
-        android:textColor="#D81B60"
-        android:textStyle="bold" />
+        android:hint="Kategória"
+        android:inputType="text"
+        android:textColor="#3F51B5"
+        android:textStyle="bold|italic" />
 
     <EditText
         android:id="@+id/etShop"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Shop"
-        android:textColor="#D81B60"
-        android:textStyle="bold" />
+        android:hint="Bolt"
+        android:textColor="#3F51B5"
+        android:textStyle="bold|italic" />
 
 </LinearLayout>

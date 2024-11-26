@@ -13,7 +13,7 @@ Itt az adatbázis műveletek találhatóak.
 interface CostItemDAO {
 
     //Az összes listázása
-    @Query("SELECT * FROM shoppingitem")
+    @Query("SELECT * FROM costitem")
     fun findAllItems(): List<CostItem>
 
     //Egy elem beszúrása

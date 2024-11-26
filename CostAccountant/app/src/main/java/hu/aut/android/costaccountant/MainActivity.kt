@@ -10,7 +10,6 @@ import android.view.View
 import hu.aut.android.costaccountant.data.AppDatabase
 import hu.aut.android.costaccountant.data.CostItem
 import hu.aut.android.costaccountant.touch.ShoppingTouchHelperCallback
-import hu.aut.android.costaccountant.R
 import uk.co.samuelwall.materialtaptargetprompt.MaterialTapTargetPrompt
 
 
@@ -75,15 +74,15 @@ class MainActivity : AppCompatActivity(), CostItemDialog.CostItemHandler {
     private fun initRecyclerView() {
         val dbThread = Thread {
             //Lekéri az összes Shopping Item-et.
-            val items = AppDatabase.getInstance(this).shoppingItemDao().findAllItems()
+            val items = AppDatabase.getInstance(this).costItemDao().findAllItems()
 
             runOnUiThread{
                 adapter = CostAccountAdapter(this, items)
-                recyclerShopping.adapter = adapter
+                recyclerCost.adapter = adapter
 
                 val callback = ShoppingTouchHelperCallback(adapter)
                 val touchHelper = ItemTouchHelper(callback)
-                touchHelper.attachToRecyclerView(recyclerShopping)
+                touchHelper.attachToRecyclerView(recyclerCost)
             }
         }
         dbThread.start()
@@ -102,7 +101,7 @@ class MainActivity : AppCompatActivity(), CostItemDialog.CostItemHandler {
 /*Új Shopping Item-kor beszúrjuk a DB-be a DAO segítségével*/
     override fun shoppingItemCreated(item: CostItem) {
         val dbThread = Thread {
-            val id = AppDatabase.getInstance(this@MainActivity).shoppingItemDao().insertItem(item)
+            val id = AppDatabase.getInstance(this@MainActivity).costItemDao().insertItem(item)
 
             item.itemId = id
 
@@ -117,7 +116,7 @@ class MainActivity : AppCompatActivity(), CostItemDialog.CostItemHandler {
         adapter.updateItem(item)
 
         val dbThread = Thread {
-            AppDatabase.getInstance(this@MainActivity).shoppingItemDao().updateItem(item)
+            AppDatabase.getInstance(this@MainActivity).costItemDao().updateItem(item)
 
             runOnUiThread { adapter.updateItem(item) }
         }

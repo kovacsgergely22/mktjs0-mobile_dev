@@ -13,11 +13,11 @@ Oszlopok:itemId, name,  price, bought.
 @PrimaryKey(autoGenerate = true): elsődleges kulcs, automatikusan generálva.
 Ide szükséges a bővítés új adattal.
  */
-@Entity(tableName = "shoppingitem")
+@Entity(tableName = "costitem")
 data class CostItem(@PrimaryKey(autoGenerate = true) var itemId: Long?,
                     @ColumnInfo(name = "name") var name: String,
                     @ColumnInfo(name = "price") var price: Int,
                     @ColumnInfo(name = "bought") var bought: Boolean,
-                    @ColumnInfo(name = "quantity") var quantity: Int,
+                    @ColumnInfo(name = "quantity") var quantity: String,
                     @ColumnInfo(name = "shop") var shop: String
 ) : Serializable
